@@ -1,0 +1,108 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+}
+header {
+  display: flex;
+  justify-content: center;
+  & h1 {
+    padding: 4px;
+  }
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* Calculator Container */
+.container {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+.inputFields {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.number::-webkit-outer-spin-button,
+.number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.number[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.number {
+  width: 45%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.number:focus {
+  border-color: #007acc;
+  outline: none;
+}
+
+/* Math Icons */
+.mathIcons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.math {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007acc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.math:hover {
+  background-color: #005a99;
+}
+
+.math:active {
+  transform: scale(0.95);
+}
+
+/* Output */
+.output {
+  text-align: center;
+}
+
+.sum {
+  font-size: 1.4rem;
+  padding: 10px;
+  color: #007acc;
+  font-weight: bold;
+  border-top: 2px solid #ddd;
+  margin-top: 10px;
+}

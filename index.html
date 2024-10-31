@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="./scripts/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>This is my first simple Calculator</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="inputFields">
+          <input
+            autocomplete="off"
+            class="number"
+            type="number"
+            name="number"
+            id="number-1"
+          />
+          <input
+            autocomplete="off"
+            class="number"
+            type="number"
+            name="number"
+            id="number-2"
+          />
+        </div>
+        <div class="mathIcons">
+          <div class="math" id="plus">+</div>
+          <div class="math" id="minus">-</div>
+          <div class="math" id="divide">%</div>
+          <div class="math" id="multiply">x</div>
+        </div>
+        <div class="output">
+          <div class="sum" id="sum"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

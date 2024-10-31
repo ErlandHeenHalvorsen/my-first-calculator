@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const nmbTwo = document.getElementById("number-2");
   const plus = document.getElementById("plus");
   const minus = document.getElementById("minus");
+  const divide = document.getElementById("divide");
+  const multiply = document.getElementById("multiply");
   const sum = document.getElementById("sum");
 
   function getParsedValues() {
@@ -21,7 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const result = num1 - num2;
     sum.textContent = result;
   }
+  function divideFunc() {
+    const [num1, num2] = getParsedValues();
+    const result = num1 / num2;
+    sum.textContent = result;
+  }
+  function multiplyFunc() {
+    const [num1, num2] = getParsedValues();
+    const result = num1 * num2;
+    sum.textContent = result;
+  }
 
   plus.addEventListener("click", plusFunc);
   minus.addEventListener("click", minusFunc);
+  divide.addEventListener("click", divideFunc);
+  multiply.addEventListener("click", multiplyFunc);
 });

@@ -1,41 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const nmbOne = document.getElementById("number-1");
-  const nmbTwo = document.getElementById("number-2");
-  const plus = document.getElementById("plus");
-  const minus = document.getElementById("minus");
-  const divide = document.getElementById("divide");
-  const multiply = document.getElementById("multiply");
-  const sum = document.getElementById("sum");
+import { plusFunc } from "./calculations/add.js";
+import { minusFunc } from "./calculations/subt.js";
+import { divideFunc } from "./calculations/divide.js";
+import { multiplyFunc } from "./calculations/multiply.js";
+import { plus, minus, divide, multiply } from "./constants.js";
 
-  function getParsedValues() {
-    const num1 = parseFloat(nmbOne.value);
-    const num2 = parseFloat(nmbTwo.value);
-    return [num1, num2];
-  }
-
-  function plusFunc() {
-    const [num1, num2] = getParsedValues();
-    const result = num1 + num2;
-    sum.textContent = result;
-  }
-  function minusFunc() {
-    const [num1, num2] = getParsedValues();
-    const result = num1 - num2;
-    sum.textContent = result;
-  }
-  function divideFunc() {
-    const [num1, num2] = getParsedValues();
-    const result = num1 / num2;
-    sum.textContent = result;
-  }
-  function multiplyFunc() {
-    const [num1, num2] = getParsedValues();
-    const result = num1 * num2;
-    sum.textContent = result;
-  }
-
+window.onload = () => {
   plus.addEventListener("click", plusFunc);
   minus.addEventListener("click", minusFunc);
   divide.addEventListener("click", divideFunc);
   multiply.addEventListener("click", multiplyFunc);
-});
+};
